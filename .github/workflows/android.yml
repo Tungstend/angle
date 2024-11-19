@@ -24,13 +24,11 @@ jobs:
       - name: Build ANGLE
         shell: bash
         run: |
-          apt install python3 python3-pip
-          pip3 install --user vpython
           git clone --depth 1 https://chromium.googlesource.com/chromium/tools/depot_tools.git
           export PATH=`pwd`/depot_tools:$PATH
           echo $PATH
           cd angle
-          vpython scripts/bootstrap.py
+          python scripts/bootstrap.py
           gclient sync
           gn gen out/Android-${{matrix.arch}}
           autoninja -C out/Android-${{matrix.arch}}
