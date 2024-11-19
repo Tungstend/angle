@@ -13,7 +13,7 @@ import sys
 
 
 def main():
-    gclient_cmd = ('gclient config --name change2dot --unmanaged '
+    gclient_cmd = ('gclient config --name change2dot --unmanaged --no-history '
                    'https://chromium.googlesource.com/angle/angle.git')
     try:
         rc = subprocess.call(gclient_cmd, shell=True)
