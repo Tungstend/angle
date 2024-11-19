@@ -978,6 +978,10 @@ deps = {
       'dep_type': 'cipd',
   },
 
+  'third_party/VK-GL-CTS/src': {
+    'url': Var('chromium_git') + '/external/github.com/KhronosGroup/VK-GL-CTS' + '@' + Var('vk_gl_cts_revision'),
+  },
+
   'third_party/vulkan-deps': {
     'url': Var('chromium_git') + '/vulkan-deps@59ce475cae66c89d42506d260af619b449272cc5',
     'condition': 'not build_with_chromium',
