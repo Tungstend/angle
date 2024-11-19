@@ -6,3 +6,4 @@ android32_ndk_api_level = 26
 android64_ndk_api_level = 26
 angle_enable_swiftshader = false
 angle_build_all = false
+dcheck_always_on = false
