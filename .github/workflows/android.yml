@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Get ANGLE
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: 'angle'
 
@@ -33,7 +33,7 @@ jobs:
           gn gen out/Android-${{matrix.arch}}
           autoninja -C out/Android-${{matrix.arch}}
       - name: Upload ANGLE
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: angle-libs-${{matrix.arch}}
           path: |
